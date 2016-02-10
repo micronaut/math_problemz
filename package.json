@@ -1,0 +1,34 @@
+{
+  "name": "math-problemz",
+  "version": "0.0.1",
+  "description": "Interactive Math Problem Solving",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micronaut/math_problemz.git"
+  },
+  "author": "Eric Danowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micronaut/math_problemz/issues"
+  },
+  "homepage": "https://github.com/micronaut/math_problemz#readme",
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.1",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^1.1.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "mocha": "^2.4.5"
+  }
+}
