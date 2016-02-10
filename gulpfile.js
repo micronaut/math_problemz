@@ -5,17 +5,17 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     lint = require('gulp-eslint');
 
-gulp.task('default', function () {//Use Babel 6.0.0 to transpile application code.
+gulp.task('default', function () {
     return gulp.src("./src/**/*.js")
         .pipe(sourcemaps.init())
         .pipe(lint())
         .pipe(lint.format())
-        //.pipe(lint.failOnError())
+        .pipe(lint.failOnError())
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("dist"));
 });
 
-gulp.task('buildTests', ['default'], function () {//Use Babel 6.0.0 to transpile test code.
+gulp.task('buildTests', ['default'], function () {
     return gulp.src("./test/*.js")
         .pipe(sourcemaps.init())
         .pipe(babel())
