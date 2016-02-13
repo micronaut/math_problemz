@@ -3,7 +3,10 @@
 class EquationGenerator {
     foobar() {
         return 5;
-    }
+    };
+    getEquation() {
+        return 'a + 5 = 12';
+    };
 }
 
-module.exports = EquationGenerator;
+export default EquationGenerator;
