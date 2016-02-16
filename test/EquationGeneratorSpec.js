@@ -67,13 +67,8 @@ describe('Equation Generator', () => {
     it('should return a valid result', () => {
         let generator = new EquationGenerator();
 
-        let equation = generator.getEquation();
-
-        let result = equation.result;
-        let variable = equation.variable.value;
-        let operator = equation.operator.operation;
-        let operand = equation.operand;
-        let calculatedResult = eval(variable + operator + operand);
+        let {variable : {character, value}, operator : {displayable, operation}, operand, equality, result} = generator.getEquation();
+        let calculatedResult = eval(value + operation + operand);
 
         expect(calculatedResult).to.equal(result);
     });

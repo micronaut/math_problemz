@@ -9,7 +9,7 @@ export const operationsMap = new Map([
     [ '/', '&divide;']
 ]);
 
-class EquationGenerator {
+export default class EquationGenerator {
 
     constructor() {
     }
@@ -30,8 +30,8 @@ class EquationGenerator {
         };
     }
 
-    _getResult(variable, operand, operator) {
-        return eval(variable.value + operator.operation + operand);
+    _getResult({c, value}, operand, {d, operation}) {
+        return eval(value + operation + operand);
     }
 
     _getOperator() {
@@ -54,5 +54,3 @@ class EquationGenerator {
         return '()';
     }
 }
-
-export default EquationGenerator;

@@ -1,5 +1,6 @@
 //http://anthonysierra.com/11012015b
 //https://onsen.io/blog/mocha-chaijs-unit-test-coverage-es6/
+https://www.smashingmagazine.com/2016/02/writing-next-generation-reusable-javascript-modules/
 require('babel-core/register');
 
 var gulp = require('gulp'),

@@ -1,7 +1,8 @@
 {
   "ecmaFeatures": {
     "classes" : true,
-    "modules" :true
+    "modules" :true,
+    "destructuring": true
   },
   "rules": {
     "quotes": [1, "single"],
