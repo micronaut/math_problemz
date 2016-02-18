@@ -1,7 +1,8 @@
 //http://anthonysierra.com/11012015b
 //https://onsen.io/blog/mocha-chaijs-unit-test-coverage-es6/
-https://www.smashingmagazine.com/2016/02/writing-next-generation-reusable-javascript-modules/
+//https://www.smashingmagazine.com/2016/02/writing-next-generation-reusable-javascript-modules/
 require('babel-core/register');
+require('babel-regenerator-runtime/runtime');
 
 var gulp = require('gulp'),
     babel = require('gulp-babel'),
