@@ -12,13 +12,14 @@ export const operationsMap = new Map([
 export default class EquationGenerator {
 
     constructor() {
+        this.randomNumber = this.random();
     }
 
     getEquation() {
         //return 'a + 5 = 12';
         let variable = this._getVariable();
         let operator = this._getOperator();
-        let operand = Math.floor((Math.random() * 99) + 1);
+        let operand = this.randomNumber.next().value;
         let equality = equalityHtmlEntities[Math.floor(Math.random() * equalityHtmlEntities.length)];
         let result = this._getResult(variable, operand, operator);
         return {
@@ -28,6 +29,13 @@ export default class EquationGenerator {
             equality : equality,
             result : result
         };
+    }
+
+    *random() {
+        const cond = true;
+        while(cond) {
+            yield Math.floor((Math.random() * 99) + 1);
+        }
     }
 
     _getResult({c, value}, operand, {d, operation}) {
@@ -46,7 +54,7 @@ export default class EquationGenerator {
     _getVariable() {
         return {
             character : variableChars[Math.floor(Math.random() * variableChars.length)],
-            value : Math.floor((Math.random() * 99) + 1)
+            value : this.randomNumber.next().value
         };
     }
 
